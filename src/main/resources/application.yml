@@ -1,0 +1,28 @@
+server:
+  port: 9999
+  context-path: /jpa
+  session:
+    timeout: 5000
+  tomcat:
+    max-threads: 100
+    uri-encoding: utf-8
+spring:
+  profiles:
+    active: girl
+  datasource:
+    url: jdbc:mysql://10.10.13.7:3306/account_dispatcher_zj?autoReconnect=true&useUnicode=yes&characterEncoding=UTF-8
+    username: devuser
+    password: devuser
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+        hibernate:
+          format_sql: true
+          dialect: org.hibernate.dialect.MySQL5Dialect
+
