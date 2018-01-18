@@ -22,6 +22,8 @@ public class MyBoot implements CommandLineRunner{
     public void run(String... strings) throws Exception {
         try {
             User user = new User();
+
+            
             user.setName("张三");
             user.setAge(20);
             userRepository.save(user);
